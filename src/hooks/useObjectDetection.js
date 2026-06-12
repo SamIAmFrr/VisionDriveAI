@@ -53,7 +53,7 @@ export function useObjectDetection() {
     canvasElement.width = videoElement.videoWidth;
     canvasElement.height = videoElement.videoHeight;
 
-    const predictions = await model.detect(videoElement);
+    const predictions = await model.detect(videoElement, 50, 0.5);
 
     // Clear canvas
     ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
